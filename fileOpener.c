@@ -1,27 +1,24 @@
 #include "monty.h"
-
 /**
  * fileOpener:checks and opens file
  * @filePath: file to be opened or checked existence
  */
-void fileOpener(char *file);
+void fileOpener(char *file)
 {
-	int fileChecker = open(filePath, O_RDONLY);
-	ssize_t lineChecker;
-	char *line;
+	FILE *fileContent;
+	char line[100];
 
-	if (fileChecker == -1)
+	fileContent = fopen(file, "r");
+	if (fileContent == NULL)
 	{
-		perror("Error: Can't open file %s", file);
+		fprintf(stderr, "Could not open file %s.\n", file);
 		exit(EXIT_FAILURE);
 	}
-	else
+	while (fgets(line, sizeof(line), fileContent) != NULL)
 	{
-		lineChecker = getline(&line, NULL, stdin);
-		while (lineChecker != -1)
-		{
-			lineBreaker(line);
-			lineChecker = getline(&line, NULL, file);
-		}
+		printf("success in fileopener\n");
+		fflush(stdout);
+		lineBreaker(line);
 	}
+	fclose(fileContent);
 }

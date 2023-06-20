@@ -1,11 +1,11 @@
 #ifndef MONTY_H
 #define MONTY_H
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+#include <sys/stat.h>
+#include <fcntl.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -21,6 +21,7 @@ typedef struct stack_s
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
+
 
 /**
  * struct instruction_s - opcode and its function
@@ -38,5 +39,8 @@ typedef struct instruction_s
 
 void fileOpener(char *file);
 void lineBreaker(char *line);
-
+void free_arg(char **array, int index);
+void montySyntax(char **array);
+void push_function(stack_t **head, unsigned int i);
+void free_linkedlist(stack_t **node);
 #endif
