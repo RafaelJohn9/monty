@@ -1,6 +1,6 @@
 #include "monty.h"
 
-#define MAXARGS 10
+#define MAXARGS 2
 /**
  * lineBreaker:breaks line to a list of arguments
  * **line:line to be broken
@@ -29,6 +29,11 @@ void lineBreaker(char *line)
 	lineToBreak = strdup(line);
 	while (lineToBreak[i] != '\0')
 	{
+		if (word > 1)
+		{
+			perror("invalid number of arguments");
+			exit(EXIT_FAILURE);
+		}
 		if (lineToBreak[i] == ' '&& lineToBreak[i + 1] != ' ')
 		{
 			arrayOfArguments[word][letter] = '\0';

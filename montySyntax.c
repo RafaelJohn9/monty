@@ -1,6 +1,6 @@
 #include "monty.h"
 
-extern stack_t **head; 
+extern stack_t **head;
 /**
  * @montySyntax:monty keywords are defined here
  * @array:array of words including arguments
@@ -24,6 +24,8 @@ void montySyntax(char **array)
 			 printf("success in monty\n");
 			 fflush(stdout);
 			 num = strtol(array[1], &endptr, 10);
+			 printf("success in str to int\n");
+			 fflush(stdout);
 			 if (array[1] == endptr)
 			 {
 				 printf("No digits were found.\n");
@@ -35,9 +37,8 @@ void montySyntax(char **array)
 				 printf("Invalid character: %c\n", *endptr);
 				 exit(EXIT_FAILURE);
 			 }
-			 printf("success in monty\n");
+			 printf("success in monty.going to cmdlist\n");
 			 fflush(stdout);
-			 num = atoi(array[1]);
 			 command_list[i].f(head, (unsigned int)num);
 			 printf("success in commannd list\n");
 			 fflush(stdout);

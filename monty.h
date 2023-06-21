@@ -21,7 +21,7 @@ typedef struct stack_s
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
-
+extern stack_t **head;
 
 /**
  * struct instruction_s - opcode and its function
@@ -41,6 +41,6 @@ void fileOpener(char *file);
 void lineBreaker(char *line);
 void free_arg(char **array, int index);
 void montySyntax(char **array);
-void push_function(stack_t **head, unsigned int i);
+void push_function(stack_t **header, unsigned int i);
 void free_linkedlist(stack_t **node);
 #endif

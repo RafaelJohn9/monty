@@ -1,1 +1,1 @@
-push 24
+push

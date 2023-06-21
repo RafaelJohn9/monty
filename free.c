@@ -9,7 +9,7 @@ void free_arg(char **array, int index)
 {
 	int i;
 
-	for (i = 0; i <= index; i++)
+	for (i = 0; i < index; i++)
 	{
 		free(array[i]);
 	}

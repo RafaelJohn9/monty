@@ -1,6 +1,5 @@
 #include "monty.h"
 
-
 stack_t **head = NULL;
 /**
  * main-receive argument
@@ -10,6 +9,13 @@ stack_t **head = NULL;
  */
 int main(int argc, char **argv)
 {
+	 head = malloc(sizeof(stack_t *));
+	 if (head == NULL)
+	 {
+		 fprintf(stderr, "Failed to allocate memory for head\n");
+		 exit(EXIT_FAILURE);
+	 }
+	 *head = NULL;
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -19,5 +25,6 @@ int main(int argc, char **argv)
 	{
 		fileOpener(argv[1]);
 	}
+	free_linkedlist(head);
 	return (0);
 }

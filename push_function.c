@@ -4,10 +4,12 @@
  * push_function:adds element to a stack
  * @arg:argument int to enter
  */
-void push_function(stack_t **head, unsigned int i)
+void push_function(stack_t **header, unsigned int i)
 {
 	stack_t *node;
 
+	printf("success in creating node\n");
+	fflush(stdout);
 	node = malloc(sizeof(stack_t));
 	if (!node)
 	{
@@ -17,16 +19,18 @@ void push_function(stack_t **head, unsigned int i)
 	node->n = i;
 	node->prev = NULL;
 	node->next = NULL;
-	if (*head == NULL || head == NULL)
+	printf("success in intializing node\n");
+	fflush(stdout);
+	if (header == NULL || *header == NULL)
 	{
-		*head = node;
+		*header = node;
 		return;
 	}
 	else
 	{
-		node->next = *head;
-		(*head)->prev = node;
-		*head = node;
+		node->next = *header;
+		(*header)->prev = node;
+		*header = node;
 		return;
 	}
 }
