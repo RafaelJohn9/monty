@@ -32,6 +32,8 @@ void lineBreaker(char *line)
 		if (word > 1)
 		{
 			perror("invalid number of arguments");
+			free(lineToBreak);
+			free_arg(arrayOfArguments, index);
 			exit(EXIT_FAILURE);
 		}
 		if (lineToBreak[i] == ' '&& lineToBreak[i + 1] != ' ')
@@ -55,6 +57,8 @@ void lineBreaker(char *line)
 	if (word != 1)
 	{
 		perror("invalid number of arguments");
+		free(lineToBreak);
+		free_arg(arrayOfArguments, index);
 		exit(EXIT_FAILURE);
 	}
 	printf("success in linebreaker\n");

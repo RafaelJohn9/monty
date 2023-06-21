@@ -29,13 +29,13 @@ void montySyntax(char **array)
 			 if (array[1] == endptr)
 			 {
 				 printf("No digits were found.\n");
-				 exit(EXIT_FAILURE);
+				 return;
 										                
 			 }
 			 else if (*endptr != '\0')
 			 {
 				 printf("Invalid character: %c\n", *endptr);
-				 exit(EXIT_FAILURE);
+				 return;
 			 }
 			 printf("success in monty.going to cmdlist\n");
 			 fflush(stdout);
@@ -47,5 +47,5 @@ void montySyntax(char **array)
 		 i++;
 	 }
 	 perror("unknown command");
-	 exit(EXIT_FAILURE);
+	 return;
 }

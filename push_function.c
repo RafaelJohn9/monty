@@ -14,7 +14,7 @@ void push_function(stack_t **header, unsigned int i)
 	if (!node)
 	{
 		perror("error allocating memory for node");
-		exit(EXIT_FAILURE);
+		return;
 	}
 	node->n = i;
 	node->prev = NULL;
