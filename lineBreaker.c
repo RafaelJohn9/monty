@@ -5,7 +5,7 @@
  * lineBreaker:breaks line to a list of arguments
  * **line:line to be broken
  */
-void lineBreaker(char *line)
+void lineBreaker(char *line, int line_number)
 {
 	char *lineToBreak;
 	char **arrayOfArguments;
@@ -61,9 +61,13 @@ void lineBreaker(char *line)
 		free_arg(arrayOfArguments, index);
 		exit(EXIT_FAILURE);
 	}
-	printf("success in linebreaker\n");
-	fflush(stdout);
-	montySyntax(arrayOfArguments);
+	if (montySyntax(arrayOfArguments) == 1)
+	{
+		fprintf(stderr, "L%d: unknown instruction %s", line_number, arrayOfArguments[0]);
+		free(lineToBreak);
+		free_arg(arrayOfArguments, index);
+		exit(EXIT_FAILURE);
+	}
 	free(lineToBreak);
 	free_arg(arrayOfArguments, index);
 }

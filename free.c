@@ -27,6 +27,7 @@ void free_linkedlist(stack_t **node)
 	while (*node != NULL)
 	{
 		temp = *node;
+		printf("%d\n",temp->n);
 		*node = (*node)->next;
 		free(temp);
 	}

@@ -38,9 +38,9 @@ typedef struct instruction_s
 } instruction_t;
 
 void fileOpener(char *file);
-void lineBreaker(char *line);
+void lineBreaker(char *line, int line_number);
 void free_arg(char **array, int index);
-void montySyntax(char **array);
+int montySyntax(char **array);
 void push_function(stack_t **header, unsigned int i);
 void free_linkedlist(stack_t **node);
 #endif

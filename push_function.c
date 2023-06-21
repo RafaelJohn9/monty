@@ -8,19 +8,15 @@ void push_function(stack_t **header, unsigned int i)
 {
 	stack_t *node;
 
-	printf("success in creating node\n");
-	fflush(stdout);
 	node = malloc(sizeof(stack_t));
 	if (!node)
 	{
-		perror("error allocating memory for node");
-		return;
+		perror("Error:malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
 	node->n = i;
 	node->prev = NULL;
 	node->next = NULL;
-	printf("success in intializing node\n");
-	fflush(stdout);
 	if (header == NULL || *header == NULL)
 	{
 		*header = node;

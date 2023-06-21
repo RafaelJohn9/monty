@@ -7,6 +7,7 @@ void fileOpener(char *file)
 {
 	FILE *fileContent;
 	char line[100];
+	int line_number = 0;
 
 	fileContent = fopen(file, "r");
 	if (fileContent == NULL)
@@ -16,9 +17,8 @@ void fileOpener(char *file)
 	}
 	while (fgets(line, sizeof(line), fileContent) != NULL)
 	{
-		printf("success in fileopener\n");
-		fflush(stdout);
-		lineBreaker(line);
+		line_number++;
+		lineBreaker(line, line_number);
 	}
 	fclose(fileContent);
 }
