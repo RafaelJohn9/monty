@@ -29,4 +29,5 @@ void add_function(stack_t **header, unsigned int line_num)
 	*header = (*header)->next;
 	free(temp);
 	(*header)->n = sum;
+	(*header)->prev = NULL;
 }
