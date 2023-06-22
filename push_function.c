@@ -16,6 +16,7 @@ void push_function(stack_t **header, unsigned int line_num)
 		if (strcmp(arg_list[1], "0") != 0)
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line_num, arg_list[0]);
+			free_arg(arg_list);
 			free_linkedlist(head);
 			exit(EXIT_FAILURE);
 		}
@@ -24,6 +25,8 @@ void push_function(stack_t **header, unsigned int line_num)
 	if (!node)
 	{
 		perror("Error:malloc failed\n");
+		free_arg(arg_list);
+		free_linkedlist(head);
 		exit(EXIT_FAILURE);
 	}
 	node->n = num;

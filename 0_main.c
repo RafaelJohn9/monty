@@ -1,6 +1,7 @@
 #include "monty.h"
 
 stack_t **head;
+char **arg_list;
 /**
  * main-receive argument
  * argc:number of arguments

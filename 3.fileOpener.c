@@ -1,6 +1,7 @@
 #include "monty.h"
-char **arg_list;
 
+char **arg_list;
+extern stack_t **head;
 /**
  * fileOpener:checks and opens file
  * @filePath: file to be opened or checked existence
@@ -15,6 +16,7 @@ void fileOpener(char *file)
 	if (fileContent == NULL)
 	{
 		fprintf(stderr, "Could not open file %s.\n", file);
+		free_linkedlist(head);
 		exit(EXIT_FAILURE);
 	}
 	while (fgets(line, sizeof(line), fileContent) != NULL)
@@ -27,6 +29,7 @@ void fileOpener(char *file)
 			continue;
 		}
 		montySyntax(arg_list, line_number);
+		free_arg(arg_list);
 	}
 	fclose(fileContent);
 }

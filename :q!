@@ -34,3 +34,8 @@ void free_linkedlist(stack_t **node)
 	}
 	free(node);
 }
+
+/**
+ * freeTokens:frees tokens
+ * @tokens:tokens to be freed
+ */
