@@ -8,6 +8,7 @@
 void swap_function(stack_t **header, unsigned int line_num)
 {
 	stack_t *temp;
+	int num;
 
 	if (*head == NULL)
 	{
@@ -22,9 +23,7 @@ void swap_function(stack_t **header, unsigned int line_num)
 		exit(EXIT_FAILURE);
 	}
 	temp = *header;
-	*header = (*header)->next;
-	(*header)->next = temp;
-	(*header)->prev = NULL;
-	temp->next = NULL;
-	temp->prev = *header;
+	num = temp->n;
+	temp->n = (temp->next)->n;
+	(temp->next)->n = num;
 }
