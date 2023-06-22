@@ -8,6 +8,7 @@
 void add_function(stack_t **header, unsigned int line_num)
 {
 	stack_t *temp;
+	int sum = 0;
 
 	if (*head == NULL)
 	{
@@ -21,5 +22,11 @@ void add_function(stack_t **header, unsigned int line_num)
 		free(header);
 		exit(EXIT_FAILURE);
 	}
-	temp = *header;
+	sum += (*header)->n;
+	sum += ((*header)->next)->n;
 
+	temp = *header;
+	*header = (*header)->next;
+	free(temp);
+	(*header)->n = sum;
+}
