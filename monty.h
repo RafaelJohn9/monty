@@ -49,4 +49,5 @@ void fileOpener(char *file);
 char **tokenizer(char *line);
 void push_function(stack_t **header, unsigned int line_num);
 void pall_function(stack_t **header, unsigned int line_num);
+void pint_function(stack_t **header, unsigned int line_num);
 #endif

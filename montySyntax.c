@@ -11,6 +11,7 @@ int montySyntax(char **array, int line_number)
 	instruction_t command_list[] = {
 		 {"push", push_function},
 		 {"pall", pall_function},
+		 {"pint", pint_function},
 		 {NULL, NULL}
 	 };
 	 int i = 0;
