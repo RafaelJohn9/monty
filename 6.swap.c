@@ -18,7 +18,7 @@ void swap_function(stack_t **header, unsigned int line_num)
 	if ((*header)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_num);
-		free(header);
+		free_linkedlist(header);
 		exit(EXIT_FAILURE);
 	}
 	temp = *header;
