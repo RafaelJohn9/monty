@@ -7,4 +7,12 @@
  */
 void nop_function(stack_t **header, unsigned int line_num)
 {
+	if (header)
+	{
+		return;
+	}
+	if (line_num)
+	{
+		return;
+	}
 }
