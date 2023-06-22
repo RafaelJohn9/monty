@@ -13,6 +13,7 @@ void pop_function(stack_t **header, unsigned int line_num)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", line_num);
 		free(header);
+		exit(EXIT_FAILURE);
 	}
 	temp = *header;
 	*header = (*header)->next;
