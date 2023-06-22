@@ -12,6 +12,8 @@ int montySyntax(char **array, int line_number)
 		 {"push", push_function},
 		 {"pall", pall_function},
 		 {"pint", pint_function},
+		 {"swap", swap_function},
+		 {"pop", pop_function},
 		 {NULL, NULL}
 	 };
 	 int i = 0;

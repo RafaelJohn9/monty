@@ -1,9 +1,6 @@
-push 0
-push 0
-push 0
-push 0
-push 0
-push 0
-push 0
-push 6
-pint
+push 1
+push 2
+push 3
+pall
+pop
+pall

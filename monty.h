@@ -47,7 +47,15 @@ void free_linkedlist(stack_t **node);
 int montySyntax(char **array, int line_number);
 void fileOpener(char *file);
 char **tokenizer(char *line);
+
+
+
+
+
+
 void push_function(stack_t **header, unsigned int line_num);
 void pall_function(stack_t **header, unsigned int line_num);
 void pint_function(stack_t **header, unsigned int line_num);
+void swap_function(stack_t **header, unsigned int line_num);
+void pop_function(stack_t **header, unsigned int line_num);
 #endif
