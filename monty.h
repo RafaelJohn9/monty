@@ -21,8 +21,9 @@ typedef struct stack_s
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
+
 extern stack_t **head;
-extern int n;
+extern char **arg_list;
 
 /**
  * struct instruction_s - opcode and its function
@@ -47,5 +48,4 @@ void fileOpener(char *file);
 char **tokenizer(char *line);
 void push_function(stack_t **header, unsigned int line_num);
 void pall_function(stack_t **header, unsigned int line_num);
-int argchecker(char **arg);
 #endif

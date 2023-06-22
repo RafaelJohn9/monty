@@ -1,7 +1,7 @@
 #include "monty.h"
 
 extern stack_t **head;
-int n;
+char **arg_list;
 /**
  * @montySyntax:monty keywords are defined here
  * @array:array of words including arguments
@@ -30,10 +30,6 @@ int montySyntax(char **array, int line_number)
 			 {
 				 fprintf(stderr, "L%d: unknown instruction %s", line_number,array[0]);
 				 exit(EXIT_FAILURE);
-			 }
-			 if (array[1] != NULL)
-			 {
-				 n = atoi(array[1]);
 			 }
 			 command_list[i].f(head, line_number);
 			 return (0);

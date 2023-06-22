@@ -1,4 +1,6 @@
 #include "monty.h"
+char **arg_list;
+
 /**
  * fileOpener:checks and opens file
  * @filePath: file to be opened or checked existence
@@ -8,7 +10,6 @@ void fileOpener(char *file)
 	FILE *fileContent;
 	char line[100];
 	int line_number = 0;
-	char **arg;
 
 	fileContent = fopen(file, "r");
 	if (fileContent == NULL)
@@ -20,12 +21,12 @@ void fileOpener(char *file)
 	{
 		line_number++;
 		/* remember to free */
-		arg = tokenizer(line);
-		if (arg == NULL)
+		arg_list = tokenizer(line);
+		if (arg_list == NULL)
 		{
 			continue;
 		}
-		montySyntax(arg, line_number);
+		montySyntax(arg_list, line_number);
 	}
 	fclose(fileContent);
 }

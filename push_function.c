@@ -1,6 +1,7 @@
 #include "monty.h"
 
-extern int n;
+extern char **arg_list;
+stack_t **head;
 /**
  * push_function:adds element to a stack
  * @arg:argument int to enter
@@ -8,16 +9,24 @@ extern int n;
 void push_function(stack_t **header, unsigned int line_num)
 {
 	stack_t *node;
-	int num;
+	int num = atoi(arg_list[1]);
 
+	if (num == 0)
+	{
+		if (strcmp(arg_list[1], "0") != 0)
+		{
+			fprintf(stderr, "L%d: unknown instruction %s\n", line_num, arg_list[0]);
+			free_linkedlist(head);
+			exit(EXIT_FAILURE);
+		}
+	} 
 	node = malloc(sizeof(stack_t));
 	if (!node)
 	{
 		perror("Error:malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	node->n = n;
-	num = n;
+	node->n = num;
 	node->prev = NULL;
 	node->next = NULL;
 	if (header == NULL || *header == NULL)
