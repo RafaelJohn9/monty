@@ -59,4 +59,5 @@ void pint_function(stack_t **header, unsigned int line_num);
 void swap_function(stack_t **header, unsigned int line_num);
 void pop_function(stack_t **header, unsigned int line_num);
 void add_function(stack_t **header, unsigned int line_num);
+void nop_function(stack_t **header, unsigned int line_num);
 #endif
