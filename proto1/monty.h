@@ -22,7 +22,6 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 extern stack_t **head;
-extern int n;
 
 /**
  * struct instruction_s - opcode and its function
@@ -38,14 +37,10 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-int fileExistence(char *file);
-int fileAccess(char *file);
-void free_arg(char **array);
-void free_linkedlist(stack_t **node);
-int montySyntax(char **array, int line_number);
 void fileOpener(char *file);
-char **tokenizer(char *line);
-void push_function(stack_t **header, unsigned int line_num);
-void pall_function(stack_t **header, unsigned int line_num);
-int argchecker(char **arg);
+void lineBreaker(char *line, int line_number);
+void free_arg(char **array, int index);
+int montySyntax(char **array);
+void push_function(stack_t **header, unsigned int i);
+void free_linkedlist(stack_t **node);
 #endif

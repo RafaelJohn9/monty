@@ -1,14 +1,12 @@
 #include "monty.h"
 
-extern int n;
 /**
  * push_function:adds element to a stack
  * @arg:argument int to enter
  */
-void push_function(stack_t **header, unsigned int line_num)
+void push_function(stack_t **header, unsigned int i)
 {
 	stack_t *node;
-	int num;
 
 	node = malloc(sizeof(stack_t));
 	if (!node)
@@ -16,8 +14,7 @@ void push_function(stack_t **header, unsigned int line_num)
 		perror("Error:malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	node->n = n;
-	num = n;
+	node->n = i;
 	node->prev = NULL;
 	node->next = NULL;
 	if (header == NULL || *header == NULL)

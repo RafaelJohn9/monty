@@ -5,14 +5,13 @@
  * @array:array to be freed
  * @index:number of items
  */
-void free_arg(char **array)
+void free_arg(char **array, int index)
 {
-	int i = 0;
+	int i;
 
-	while (array[i] != NULL)
+	for (i = 0; i < index; i++)
 	{
 		free(array[i]);
-		i++;
 	}
 	free(array);
 }
@@ -28,6 +27,7 @@ void free_linkedlist(stack_t **node)
 	while (*node != NULL)
 	{
 		temp = *node;
+		printf("%d\n",temp->n);
 		*node = (*node)->next;
 		free(temp);
 	}
