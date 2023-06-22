@@ -22,12 +22,9 @@ void sub_function(stack_t **header, unsigned int line_num)
 		free_linkedlist(header);
 		exit(EXIT_FAILURE);
 	}
-	sub += (*header)->n;
-	sub -= ((*header)->next)->n;
-	if (sub < 0)
-	{
-		sub *= -1;
-	}
+	sub -= (*header)->n;
+	sub += ((*header)->next)->n;
+
 	temp = *header;
 	*header = (*header)->next;
 	free(temp);
