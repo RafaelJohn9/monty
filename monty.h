@@ -39,6 +39,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+char *my_strdup(const char *str);
 int fileExistence(char *file);
 int fileAccess(char *file);
 void free_arg(char **array);

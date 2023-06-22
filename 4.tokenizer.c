@@ -12,7 +12,7 @@ char **tokenizer(char *line)
 	char **arg;
 	char *line_1;
 
-	line_1 = strdup(line);
+	line_1 = my_strdup(line);
 	if (line == NULL || line[0] == '\n')
 	{
 		    return NULL;
