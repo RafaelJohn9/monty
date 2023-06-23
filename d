@@ -1,5 +1,4 @@
-nop
 push 12
-push 45
-sub
+push     45
+push
 pall
