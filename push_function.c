@@ -11,7 +11,7 @@ void push_function(stack_t **header, unsigned int line_num)
 	stack_t *node;
 	int num;
 
-	if (arg_list[1] == NULL)
+	if (arg_list[1] == NULL || arg_list[2] != NULL)
 	{
 		fprintf(stderr, "L%d:usage:push integer\n", line_num);
 		free_arg(arg_list);
