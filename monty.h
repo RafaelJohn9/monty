@@ -61,4 +61,5 @@ void pop_function(stack_t **header, unsigned int line_num);
 void add_function(stack_t **header, unsigned int line_num);
 void nop_function(stack_t **header, unsigned int line_num);
 void sub_function(stack_t **header, unsigned int line_num);
+void div_function(stack_t **header, unsigned int line_num);
 #endif

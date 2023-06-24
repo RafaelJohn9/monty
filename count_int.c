@@ -9,6 +9,15 @@ long unsigned int count_int(int num)
 {
 	int count = 0;
 
+	if (num == 0)
+	{
+		return (1);
+	}
+	if (num < 0)
+	{
+		num *= -1;
+		count++;
+	}
 	while (num > 0)
 	{
 		count++;

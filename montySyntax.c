@@ -17,6 +17,7 @@ int montySyntax(char **array, int line_number)
 		 {"add", add_function},
 		 {"nop", nop_function},
 		 {"sub", sub_function},
+		 {"div", div_function},
 		 {NULL, NULL}
 	 };
 	 int i = 0;
