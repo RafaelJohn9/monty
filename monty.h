@@ -62,4 +62,9 @@ void add_function(stack_t **header, unsigned int line_num);
 void nop_function(stack_t **header, unsigned int line_num);
 void sub_function(stack_t **header, unsigned int line_num);
 void div_function(stack_t **header, unsigned int line_num);
+void mul_function(stack_t **header, unsigned int line_num);
+void mod_function(stack_t **header, unsigned int line_num);
+void pchar_function(stack_t **header, unsigned int line_num);
+void pstr_function(stack_t **header, unsigned int line_num);
+void rotl_function(stack_t **header, unsigned int line_num);
 #endif

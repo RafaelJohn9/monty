@@ -10,9 +10,12 @@ void pall_function(stack_t **header, unsigned int line_num)
 {
 	stack_t *temp;
 
-	if(!header)
+	if (!line_num)
 	{
-		printf("L%d: empty  list", line_num);
+		return;
+	}
+	if(!(*header))
+	{
 		return;
 	}
 	temp = *header;

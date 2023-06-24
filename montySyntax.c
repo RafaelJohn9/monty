@@ -18,6 +18,13 @@ int montySyntax(char **array, int line_number)
 		 {"nop", nop_function},
 		 {"sub", sub_function},
 		 {"div", div_function},
+		 {"mul", mul_function},
+		 {"mod", mod_function},
+		 {"sub", sub_function},
+		 {"#", nop_function},
+		 {"pchar", pchar_function},
+		 {"pstr", pstr_function},
+		 {"rotl", rotl_function},
 		 {NULL, NULL}
 	 };
 	 int i = 0;
