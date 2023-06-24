@@ -1,13 +1,24 @@
 push 1
-push 2
-push 3
-push 4
-push 5
-push 6
-push 7
-push 8
-push 9
-push 0
-pall
-rotl
-pall
+ #Comment
+ push 2
+ push 3
+        # Another comment
+        #
+        #Above is an empty comment
+        pint
+        nop
+        push 4
+        swap
+        pop
+         # Another just below
+               #
+               add
+               push 1
+               sub
+               push 2
+               div
+               push 12
+               mul
+               push 9
+               mod
+               pall

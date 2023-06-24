@@ -21,7 +21,6 @@ int montySyntax(char **array, int line_number)
 		 {"mul", mul_function},
 		 {"mod", mod_function},
 		 {"sub", sub_function},
-		 {"#", nop_function},
 		 {"pchar", pchar_function},
 		 {"pstr", pstr_function},
 		 {"rotl", rotl_function},
@@ -38,7 +37,12 @@ int montySyntax(char **array, int line_number)
 
 	 while (command_list[i].opcode != NULL)
 	 {
-		 if (strcmp(array[0], command_list[i].opcode) == 0)
+		 if (array[0][0] == '#')
+		 {
+			 command_list[6].f(head, line_number);
+			 return (0);
+		 }
+		 else if (strcmp(array[0], command_list[i].opcode) == 0)
 		 {
 			 if (count > 100)
 			 {
