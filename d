@@ -1,6 +1,4 @@
-push 144
-push 14
-push 12
-pall
-push 134r
-pall
+push 1
+push     2
+
+push 

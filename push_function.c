@@ -13,7 +13,7 @@ void push_function(stack_t **header, unsigned int line_num)
 
 	if (arg_list[1] == NULL)
 	{
-		fprintf(stderr, "L%d:usage:push integer\n", line_num);
+		fprintf(stderr, "L%d: usage: push integer\n", line_num);
 		free_arg(arg_list);
 		free_linkedlist(head);
 		exit(EXIT_FAILURE);
@@ -21,7 +21,7 @@ void push_function(stack_t **header, unsigned int line_num)
 	num = atoi(arg_list[1]);
 	if (count_int(num) != strlen(arg_list[1]))
 	{
-		fprintf(stderr, "L%d:usage:push integer\n", line_num);
+		fprintf(stderr, "L%d: usage: push integer\n", line_num);
 		free_arg(arg_list);
 		free_linkedlist(head);
 		exit(EXIT_FAILURE);
@@ -30,7 +30,7 @@ void push_function(stack_t **header, unsigned int line_num)
 	{
 		if (strcmp(arg_list[1], "0") != 0)
 		{
-			fprintf(stderr, "L%d:usage:push integer\n", line_num);
+			fprintf(stderr, "L%d: usage: push integer\n", line_num);
 			free_arg(arg_list);
 			free_linkedlist(head);
 			exit(EXIT_FAILURE);
