@@ -17,19 +17,19 @@ char **tokenizer(char *line)
 
 	if (line == NULL || line[0] == '\0')
 	{
-		return NULL;
+		return (NULL);
 	}
 	line_copy = malloc(strlen(line) + 1);
 	if (line_copy == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 	strcpy(line_copy, line);
 	token = strtok(line_copy, delimiters);
 	if (token == NULL)
 	{
 		free(line_copy);
-		return NULL;
+		return (NULL);
 	}
 	while (token != NULL)
 	{
@@ -40,7 +40,7 @@ char **tokenizer(char *line)
 	if (tokens == NULL)
 	{
 		free(line_copy);
-		return NULL;
+		return (NULL);
 	}
 	token = strtok(line, delimiters);
 	while (token != NULL)
@@ -54,7 +54,7 @@ char **tokenizer(char *line)
 			}
 			free(tokens);
 			free(line_copy);
-			return NULL;
+			return (NULL);
 		}
 		strcpy(tokens[index], token);
 		index++;
@@ -62,5 +62,5 @@ char **tokenizer(char *line)
 	}
 	tokens[index] = NULL;
 	free(line_copy);
-	return tokens;
+	return (tokens);
 }

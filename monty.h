@@ -47,7 +47,7 @@ void free_linkedlist(stack_t **node);
 int montySyntax(char **array, int line_number);
 void fileOpener(char *file);
 char **tokenizer(char *line);
-
+long unsigned int count_int(int num);
 
 
 

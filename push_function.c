@@ -11,7 +11,7 @@ void push_function(stack_t **header, unsigned int line_num)
 	stack_t *node;
 	int num;
 
-	if (arg_list[1] == NULL || arg_list[2] != NULL)
+	if (arg_list[1] == NULL)
 	{
 		fprintf(stderr, "L%d:usage:push integer\n", line_num);
 		free_arg(arg_list);
@@ -19,6 +19,13 @@ void push_function(stack_t **header, unsigned int line_num)
 		exit(EXIT_FAILURE);
 	}
 	num = atoi(arg_list[1]);
+	if (count_int(num) != strlen(arg_list[1]))
+	{
+		fprintf(stderr, "L%d:usage:push integer\n", line_num);
+		free_arg(arg_list);
+		free_linkedlist(head);
+		exit(EXIT_FAILURE);
+	}
 	if (num == 0)
 	{
 		if (strcmp(arg_list[1], "0") != 0)
@@ -28,7 +35,7 @@ void push_function(stack_t **header, unsigned int line_num)
 			free_linkedlist(head);
 			exit(EXIT_FAILURE);
 		}
-	} 
+	}
 	node = malloc(sizeof(stack_t));
 	if (!node)
 	{
