@@ -9,13 +9,13 @@ void pchar_function(stack_t **header, unsigned int line_num)
 {
 	int num = (*header)->n;
 
-	if (*header == NULL)
+	if (header == NULL || *header == NULL)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_num);
 		free(header);
 		exit(EXIT_FAILURE);
 	}
-	if (num > 127)
+	if (num  < 0|| num > 127)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_num);
 		free_linkedlist(header);
