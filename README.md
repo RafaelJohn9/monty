@@ -90,7 +90,3 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o monty
 ## Conclusion
 
 Creating the Monty interpreter was a rewarding experience that significantly contributed to my professional and personal growth. It provided me with a deeper understanding of low-level programming, data structures, and problem-solving techniques, making me a more skilled and confident developer.
-
-----
-
-Feel free to reach out if you have any questions or would like to discuss the Monty interpreter project in more detail!
