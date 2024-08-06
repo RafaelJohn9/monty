@@ -1,7 +1,5 @@
 #include "monty.h"
 
-extern char **arg_list;
-stack_t **head;
 /**
  * push_function:adds element to a stack
  * @arg:argument int to enter

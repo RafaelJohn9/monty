@@ -1,7 +1,5 @@
 #include "monty.h"
 
-char **arg_list;
-extern stack_t **head;
 /**
  * fileOpener:checks and opens file
  * @filePath: file to be opened or checked existence

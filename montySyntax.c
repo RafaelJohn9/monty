@@ -1,7 +1,5 @@
 #include "monty.h"
 
-extern stack_t **head;
-extern char **arg_list;
 /**
  * @montySyntax:monty keywords are defined here
  * @array:array of words including arguments

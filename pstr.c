@@ -1,6 +1,5 @@
 #include "monty.h"
 
-extern char **arg_list;
 /**
  * pstr_function-prints all in stack as a string
  * @header:the ptr to head node ptr

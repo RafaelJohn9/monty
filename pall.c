@@ -1,6 +1,5 @@
 #include "monty.h"
 
-extern char **arg_list;
 /**
  * pall_function-prints all in stack
  * @header:the ptr to head node ptr
