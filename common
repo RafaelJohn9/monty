@@ -1,8 +1,0 @@
-#include "monty.h"
-
-/**
- * swap_function-swaps first two nodes
- * @header:head node ptr to ptr
- * @line_num:line number
- */
-void swap_function(stack_t **header, unsigned int line_num)
