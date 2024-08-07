@@ -1,4 +1,4 @@
-# [Monty Bytecode Interpreter](https://micahondiwa.hashnode.dev/monty-language-implementing-stacks-queues)
+# Monty Bytecode Interpreter ~ [article](https://dev.to/rafaeljohn9/building-a-monty-bytecode-interpreter-a-hands-on-approach-to-learning-stacks-and-queues-52m1)
 
 ----
 ***Demo video of how it works***
